@@ -1,0 +1,71 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin: 30px;
+}
+
+.wrap {
+	margin: 0 auto;
+}
+
+
+#loadingDiv {
+	background: url(images/loading.gif);
+}
+
+@media (min-width: 800px) and (max_width: 1000px) {
+
+#epresults {
+	width: 100%;
+	max-width: 700px;
+	height: auto;
+	display: none;
+}
+.slug , .blurb, .cta {
+	font-family: arial, sans-serif;
+	font-size: 14px;
+	padding: 10px;
+	color: black;
+	background: yellow;
+	width: auto;
+	height: auto;
+	display: block;
+}
+.slug {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.image {
+	float: left;
+	padding: 15px;
+}
+.cta {
+	padding: 10px 0 10px 15px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+}
+
+@media (max-width: 799px) {
+
+#epresults {
+ width: 100%;
+ max-width: 750px;
+ padding: 20px;
+
+}
+
+.slug, .blurb, .cta {
+   font-size: 12px;
+}
+
+.image {
+ float: left;
+ padding: 10px;
+}
+}
