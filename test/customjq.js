@@ -19,10 +19,13 @@ $(document)
 				var myimage = data[key].image;
 				var myblurb = data[key].blurb;
 				var mycta = data[key].cta;
-				$("#epresults").append("<div class='slug'>"+myslug+"</div>");
-				$("#epresults").append("<div class='image'><img src='"+myimage+"' alt=''></div>");
-				$("#epresults").append("<div class='blurb'>"+myblurb+"</div>");
-				$("#epresults").append("<div class='cta'><a href=''>"+mycta+"</a></div><hr>");
+				$("#epresults").append("<div class='inner"+[key]+" slug'>"+myslug+"</div>");
+				$("#epresults").append("<div class='inner"+[key]+" image'><img src='"+myimage+"' alt=''></div>");
+				$("#epresults").append("<div class='inner"+[key]+" blurb'>"+myblurb+"</div>");
+				$("#epresults").append("<div class='inner"+[key]+" cta'><a href=''>"+mycta+"</a></div>");
+				$(".inner"+[key]+"").wrapAll("<div class='tile' />");
+				
+				
 			})
 		},
 		error: function(xhr, desc, err) {
