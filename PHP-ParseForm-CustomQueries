@@ -1,5 +1,4 @@
 <?php
-
 //standard db connection
 $con = mysqli_connect("mysql2.fluidhosting.com", "[demo - uid]", "[demo - pw]") or die( "We are experiencing technical difficulties with our database at this time. Please call us at (800) 272-3900 and we'll help you find support groups."  );
 //$con = mysqli_connect("mysql2.fluidhosting.com",  "[demo - uid]", "[demo - pw]") or die(mysql_error());
