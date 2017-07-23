@@ -52,7 +52,6 @@ var Poemnav = React.createClass({
 });
 
 // Render the menu component on the page, and pass an array with menu options
-
 React.render(
     <Poemnav items={ [<a href="#all" >All Poems</a>, <a href="#poems2016" class="2016">2016</a>,  <a href="#poems2015" class="2015">2015</a>, <a href="#poems2014" class="2014">2014</a>, <a href="#poems2013" class="2013">2013</a>, <a href="#poems2012" class="2012">2012</a>, <a href="#poems2011" class="2011">2011</a>, <a href="#poems2010" class="2010">2010</a>, <a href="#poems2009" class="2009">2009</a>,  <a href="#poemsOther" class="Other">Other</a>] } />,
   document.getElementById('poemnav'));
