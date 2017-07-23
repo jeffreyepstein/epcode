@@ -48,7 +48,6 @@ var Poemnav = React.createClass({
                 
               
             </div> );
-
     }
 });
 
