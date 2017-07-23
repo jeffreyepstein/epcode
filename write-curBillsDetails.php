@@ -11,6 +11,5 @@
 		'Reply-To: ' . $to . "\r\n" .
 		'X-Mailer: PHP/' . phpversion();
 		$emailmessage = 'GetLegInfo succesfully run';
-		mail($to, $subject, $emailmessage, $headers);
-		
+		mail($to, $subject, $emailmessage, $headers);		
 ?> 
