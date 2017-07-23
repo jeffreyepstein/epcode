@@ -1,3 +1,5 @@
+//Basic example of php coding - in this case retrieving a database record and returning it as json.
+
 <?php
 
 //standard db connection
