@@ -1,3 +1,4 @@
+//example of using Google Calendar
 $(document).ready(function() {
 	$('#calendar').fullCalendar({
 		googleCalendarApiKey: ' REDACTED FOR DEMO ',  //our API key
