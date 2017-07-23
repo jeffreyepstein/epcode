@@ -1,0 +1,750 @@
+/* ==========================================================================
+   Responsive styles for SilverAlert - Created by Jeff Epstein 2017
+   ========================================================================== */
+/* WEB FONTS */
+
+.UniversLT-Condensed { 
+		font-family: UniversLT-Condensed;
+		font-weight: normal;
+		font-style: normal;
+	}
+
+.HouschkaAltPro-Bold {
+    font-family: HouschkaAltPro-Bold;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.HouschkaAltPro-ExtraBold {
+    font-family: HouschkaAltPro-ExtraBold;
+    font-weight: normal;
+    font-style: normal;
+}
+.HouschkaAltPro-Light {
+    font-family: HouschkaAltPro-Light;
+    font-weight: normal;
+    font-style: normal;
+}
+.HouschkaAltPro-Medium {
+    font-family: HouschkaAltPro-Medium;
+    font-weight: normal;
+    font-style: normal;
+}
+/* END WEB FONTS */
+
+/*  ARCHITECTURE */
+
+ html {
+        margin: 0;
+        padding: 0;
+    }
+	
+body {
+    margin: 0 auto;
+	padding: 0;
+	height: auto;
+	background: url(http://www.alzmass.org/global/ds/images/bg_gradient.jpg);
+	background-size: contain;
+	z-index: 1;
+	/*  DEBUG:  border: 3px solid green; */
+ }
+ 
+ sup {
+	font-size: 10px;
+  }
+  
+ img {
+	border: 0;
+ }
+
+div#container {
+	margin-top: 0;
+	width: 912px;
+	min-height: 1800px;
+	background: white;
+	margin: auto;
+	height: auto;
+	/*border: 1px solid blue; */
+	z-index: 10;
+}
+
+div.donatenow {
+    position: absolute;
+    width: 160px;
+    height: 47px;
+    margin-top: 30px;
+    margin-left: 730px;
+    border: rgb(244,119,53);
+    background: rgb(234,191,72);
+    box-shadow: 2px 2px 3px #ababab;
+    z-index: 20;
+	}
+		
+div.donatenow a {
+    position: absolute;
+    margin-top: 10px;
+    left: 17px;
+    width: 160px;
+    height: 47px;
+    font-family: UniversLT-Condensed, sans-serif;
+    font-size: 22px;
+    color: #f7f7f7;
+    text-decoration: none;
+    z-index: 21;
+}
+
+.header-container {
+        position: relative;
+        width: 100%;
+        background: #fff;
+        display: inline;
+        /* border: 1px solid green; */
+    }
+	
+.innerwrapper, .outerwrapper {
+	font-family: HouschkaAltPro-Medium;
+	background: #fff;
+	}
+	
+
+#video {
+	position: relative;
+	top: 100px;
+	left: 300px;
+	padding: 10px;
+}
+
+.videocopy {
+	position: relative;
+	top: -200px;
+	left: 0;
+	padding: 10px;
+	width: 200px;
+	font-size: 1.2em;
+	line-height: 1.5em;
+}
+	
+ .content1, .content2 {
+	position: relative;
+	top: -21px;
+	}
+
+ .banner2 {
+	display: none;
+ }
+
+  .content2 {
+	display: none;
+ }
+ 
+.footer img {
+		margin-top: 20px;
+        margin-right: 10px;
+    }
+	
+.logo img {
+        width: 235px;
+        height: 181px;
+        /* border: 1px solid orange; */
+        clear: left;
+    }
+
+a.assnlogo img {
+        display: block;
+ 		margin-left: 40px;
+        width: 354px;
+		height: 54px;
+    }
+	
+a {
+	color: #65378e;
+}
+
+a:hover, a:active {
+		 color: rgb(234,191,73); 
+}
+	
+a:link {
+        color: rgb(74, 13, 102);
+        text-decoration: underline;
+        cursor: pointer;
+    }
+	
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+}
+	
+.innerwrapper img {
+		position: relative;
+		float: left;
+		clear: right;
+		padding: 5px 10px 10px 0;
+		z-index: 1;
+		}
+			
+     b,
+    strong,
+    .bold {
+        font-family: HouschkaAltPro-Bold, sans-serif;
+        font-weight: normal;
+    }
+
+@media screen and (min-width: 1020px) {
+
+div#boundary {
+	width: 1024px;
+	margin: auto;
+	margin-top: 0;
+	min-height: 1000px;
+	background: url(http://www.alzmass.org/global/ds/images/subtle_dots.png) repeat;
+	text-align: left;
+	/* border: 2px solid red; */
+	z-index: 5;
+}
+
+h1 {
+	font-family: HouschkaAltPro-ExtraBold, sans-serif;
+    font-size: 2.5em;
+}
+
+
+h2 {
+	font-family: HouschkaAltPro-Bold, sans-serif;
+    font-size: 1.4em;
+}
+
+h4, p {
+	 font-family: HouschkaAltPro-Light, sans-serif;
+	 font-size: 1.1em;
+	 line-height: 1.3em;
+	}
+
+    .outerwrapper {
+        position: relative;
+        margin: 0 auto;
+        top: 0;
+        left: 0;
+        width: 100%;
+        max-width: 1500px;
+		background: #fff;
+    }
+	
+    .innerwrapper {
+        position: relative;
+		margin: 20px auto;
+        width: 94%;
+        height: auto;
+        background: #fff;
+		border-top: 1px solid #ccc;
+		padding-top: 20px;
+        /* border: 3px solid red; */
+        z-index: 1;
+		font-size: 1.0em;
+		line-height: 1.3em;
+	}
+	
+	div.header {
+    margin-top: 0px;
+    width: 912px;
+    height: 100px;
+	}
+   
+	div.header img {
+    margin-top: 0px;
+    margin-left: 20px;
+	}
+	
+	.switchlogo {
+		display:block;
+		background-image: url(http://alzmass.org/global/ds/images/header-image.jpg) !important;
+		background-repeat: no-repeat !important;
+		background-position: center !important;
+		width:  659px !important;
+		height: 72px !important;
+		border: 0;
+		float: left;
+		margin-left: 30px;
+		}
+    	
+		/* The silver audience banner */
+	 .banner1, .banner2 {
+	    position: relative;
+		top: -26px;
+		left: 250px;
+		font-family: HouschkaAltPro-Bold;
+		font-size: 1.5em;
+		padding: 5px;
+		width: 290px;
+		background-image: url(../images/chrome.png);
+		}
+			
+	.sidebar1, .sidebar2 {
+		position: relative;
+		float: right;
+		top: -60px;
+		left: 0;
+		width: 200px;
+		height: auto;
+		padding: 5px;
+		font-size: 0.8em;
+		background: #ffffcc;
+		border: 1px solid purple;
+		margin-left: 20px;
+		z-index: 5;
+	}
+	.sidebar1 a, .sidebar2 a {
+		text-decoration: underline;
+		cursor: pointer;
+	}
+	 .sidebar2 {
+		display: none;
+	 }
+    b,
+    strong,
+    .bold {
+        font-family: HouschkaAltPro-Bold, sans-serif;
+        font-weight: normal;
+    }
+    .container,
+    .detailspage {
+        font-family: Arial, sans-serif;
+        padding: 30px;
+        background: #fff;
+        font-size: 14px;
+        text-align: left;
+    }
+    p.detailspagetitle {
+        font-family: HouschkaAltPro-ExtraBold, brandon_grotesqueblack, sans-serif;
+        font-size: 1.8em;
+        margin-left: 125px;
+        text-transform: uppercase;
+        color: rgb(101, 55, 142);
+    }
+    .maintitle {
+        font-family: HouschkaAltPro-ExtraBold, brandon_grotesqueblack;
+        color: rgb(74, 13, 102);
+        font-size: 3.440em;
+        text-transform: uppercase;
+        float: right;
+        /* border: 1px solid blue; */
+    }
+	
+    .rule {
+        border-top: 1px solid #ccc;
+        height: 1px;
+        margin-top: 30px;
+        margin-left: 50px;
+    }
+  
+	iframe {
+        margin-top: -100px;
+        width: 515px;
+        height: 288px;
+    }
+}
+
+/* ======================================================================================================================= */
+
+@media screen and (min-width: 676px) and (max-width: 1019px) {
+    html {
+        margin: 0;
+        padding: 0;
+    }
+	
+    body {
+        margin: 0 auto;
+        padding: 0;
+        background: #e2e2e2;
+        height: auto;
+    }
+	
+	div.donatenow {
+		position: absolute;
+		width: 160px;
+		height: 47px;
+		margin-top: -50px;
+		margin-left: 500px;
+		border: rgb(244,119,53);
+		background: rgb(234,191,72);
+		box-shadow: 2px 2px 3px #ababab;
+		z-index: 20;
+	}
+		
+	div.donatenow a {
+    position: absolute;
+    margin-top: 10px;
+    left: 17px;
+    width: 160px;
+    height: 47px;
+    font-family: UniversLT-Condensed, sans-serif;
+    font-size: 22px;
+    color: #f7f7f7;
+    text-decoration: none;
+    z-index: 21;
+	}
+	
+	h1 {
+	    font-family: HouschkaAltPro-ExtraBold, sans-serif;
+		font-size: 1.7em;
+		}
+		
+	
+	h2 {
+		font-family: HouschkaAltPro-Bold, sans-serif;
+		font-size: 1.2em;
+	}
+
+	h4, p {
+		 font-family: HouschkaAltPro-Light, sans-serif;
+		 font-size: 1.0em;
+		 line-height: 1.3em;
+		}
+
+	div#boundary {
+		margin: auto;
+		margin-top: 0;
+		min-height: 1000px;
+		background: url(http://www.alzmass.org/global/ds/images/subtle_dots.png) repeat;
+		text-align: left;
+		/* border: 2px solid red; */
+		z-index: 5;
+	}
+	
+	div#container {
+		margin: auto;
+		margin-top: 0;
+		width: 90%;
+		background: white;
+		height: auto;
+		/*border: 1px solid blue; */
+		z-index: 10;
+	}
+    .outerwrapper {
+        position: absolute;
+        margin: 0 auto;
+        top: 0;
+        left: 0;
+        width: 93%;
+		background: #fff;
+		}
+	
+	.innerwrapper {
+        position: relative;
+		padding-top: 20px;
+		margin: 20px auto;
+        width: 94%;
+        height: auto;
+        background: #fff;
+        border-top: 1px solid #ccc;
+        z-index: 1;
+		font-size: 1.0em;
+		line-height: 1.3em;
+		}
+		
+	div.header {
+		margin-top: 10px;
+		margin-left: 10px;
+		}
+	
+	div.header img {
+		margin-top: 0px;
+		margin-left: 20px;
+		}
+	
+	div.switchlogo {
+		display:block;
+		margin-top: 10px;
+		margin-left: 10px;
+		background-image: url(../images/header-image-250.jpg) !important;
+		background-repeat: no-repeat !important;
+		background-size: 250px 61px;
+		height: 61px;
+		}
+    	
+	/* The silver audience banner */
+	 .banner1, .banner2 {
+	    position: relative;
+		top: -26px;
+		left: 180px;
+		font-family: HouschkaAltPro-Bold;
+		font-size: 1.2em;
+		padding: 5px;
+		width: 230px;
+		background-image: url(../images/chrome.png);
+		}
+			
+	.sidebar1, .sidebar2 {
+		position: relative;
+		float: right;
+		top: -60px;
+		left: 0;
+		width: 200px;
+		height: auto;
+		padding: 5px;
+		font-size: 0.8em;
+		background: #ffffcc;
+		border: 1px solid purple;
+		margin-left: 20px;
+		z-index: 5;
+	}
+	.sidebar1 a, .sidebar2 a {
+		text-decoration: underline;
+		cursor: pointer;
+	}
+	 .sidebar2 {
+		display: none;
+	 }
+    .maintitle {
+        font-family: HouschkaAltPro-ExtraBold, sans-serif;
+        color: rgb(74, 13, 102);
+        font-size: 2.0em;
+        text-transform: uppercase;
+        float: right;
+        /* border: 1px solid blue; */
+    }
+    .rule {
+        border-top: 1px solid #ccc;
+        height: 1px;
+        margin-top: 160px;
+        margin-left: 30px;
+    }
+    .contentsmain {
+        width: 98%;
+        margin: 0 auto;
+        display: block;
+    }
+    .detailspage {
+        display: none;
+        width:  60%;
+    }
+    .main,
+    .main2 {
+        position: relative;
+        width: 99%;
+        padding: 15px;
+        clear: both;
+        z-index: 1;
+    }
+    .main2 {
+        margin-top: -20px;
+    }
+    .detailspage > .main2 {
+        background: #f5f5f5;
+        padding-top: 10px;
+    }
+    .home {
+        position: relative;
+        top: 0;
+        width: 100%;
+        height: auto;
+        /*border: 1px solid green; */
+        z-index: 1;
+    }
+    .copy {
+		width: 100%;
+        margin-bottom: 20px;
+        font-family: HouschkaAltPro-Light,sans-serif;
+        font-size: 1.2em;
+        line-height: 1.0em;
+        color: #000;
+        z-index: 99;
+        display: block;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #ccc;
+    }
+   	#video, .videocopy {
+		display: none;
+	}
+  }
+   
+/* ============================================================== */
+
+@media screen and (max-width: 675px) {
+	div#boundary {
+		height: auto;
+		margin: auto;
+		margin-top: 0;
+		background: url(http://www.alzmass.org/global/ds/images/subtle_dots.png) repeat;
+		text-align: left;
+		/* border: 2px solid red; */
+		z-index: 5;
+	}
+	
+	div#container {
+		margin-top: 0;
+		width: 98%;
+		height: auto;
+		margin: auto;
+		background: white;
+		/*border: 1px solid blue; */
+		z-index: 10;
+	}
+	
+    .outerwrapper {
+        position: absolute;
+        margin: 0 auto;
+        top: 0;
+        left: 0;
+        width: 93%;
+		background: #fff;
+		}
+	
+	h1 {
+	    font-family: HouschkaAltPro-ExtraBold, sans-serif;
+		font-size: 1.5em;
+		}
+		
+	h2 {
+		font-family: HouschkaAltPro-Bold, sans-serif;
+		font-size: 1.2em;
+	}
+
+	h4, p {
+		 font-family: HouschkaAltPro-Light, sans-serif;
+		 font-size: 1.0em;
+		 line-height: 1.3em;
+		}
+
+	div.header {
+		margin-top: 10px;
+		margin-left: 10px;
+		}
+	
+	div.header img {
+		margin-top: 0px;
+		margin-left: 20px;
+		}
+			
+	div.donatenow {
+		display: none;
+	}
+		
+	div.donatenow a {
+		position: absolute;
+		margin-top: 10px;
+		left: 17px;
+		width: 160px;
+		height: 47px;
+		font-family: UniversLT-Condensed, sans-serif;
+		font-size: 22px;
+		color: #f7f7f7;
+		text-decoration: none;
+		z-index: 21;
+	}
+	
+	div.switchlogo {
+		display:block;
+		margin-top: 10px;
+		margin-left: 10px;
+		background-image: url(../images/header-image-250.jpg) !important;
+		background-repeat: no-repeat !important;
+		background-size: 250px 61px;
+		height: 61px;
+		}
+    
+	/* The silver audience banner */
+	 .banner1, .banner2 {
+	    position: relative;
+		top: 10px;
+		left: 0;
+		font-family: HouschkaAltPro-Bold;
+		font-size: 0.8em;
+		padding: 2px;
+		margin-bottom: 50px;
+		width: 180px;
+		background-image: url(../images/chrome.png);
+		}
+			
+	.sidebar1, .sidebar2 {
+		position: relative;
+		float: right;
+		top: -110px;
+		left: 0;
+		width: 40%;
+		height: auto;
+		padding: 2px;
+		font-size: 0.8em;
+		background: #ffffcc;
+		border: 1px solid purple;
+		margin-left: 20px;
+		z-index: 5;
+	}
+	.sidebar1 a, .sidebar2 a {
+		text-decoration: underline;
+		cursor: pointer;
+	}
+	 .sidebar2 {
+		display: none;
+	 }
+		
+	img#biglogo {
+		display: none;
+	}
+
+   .innerwrapper {
+        position: relative;
+		padding-top: 20px;
+		margin: 20px auto;
+        width: 94%;
+        height: auto;
+        background: #fff;
+        border-top: 1px solid #ccc;
+        z-index: 1;
+		font-size: 1.0em;
+		line-height: 1.3em;
+    }
+	
+	.innerwrapper img.wandering {
+		width: 40%;
+	}
+	
+    .maintitle {
+        font-family: HouschkaAltPro-ExtraBold, brandon_grotesqueblack;
+        color: rgb(74, 13, 102);
+        font-size: 1.2em;
+        text-transform: uppercase;
+        display: block;
+        order: 3;
+        /* border: 1px solid blue; */
+    }
+
+    .contentsmain {
+        width: 98%;
+        margin-left: 0;
+        display: block;
+    }
+    
+    .home {
+        position: relative;
+        top: 0;
+        width: 100%;
+        height: auto;
+        /*border: 1px solid green; */
+        
+        z-index: 1;
+    }
+	
+	.content1, .content2 {
+		position: relative;
+		top: 0;
+	}
+	
+	 
+    .copy {
+        position: relative;
+        width: 100%;
+        float: left;
+        font-family: HouschkaAltPro-Light, sans-serif;
+        font-size: 1.0em;
+        color: #000;
+        z-index: 99;
+        display: block;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #ccc;
+    }
+	
+	#video, .videocopy {
+		display: none;
+	}
+}
