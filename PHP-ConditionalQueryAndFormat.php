@@ -1,18 +1,19 @@
 <?php
-
 //standard db connection
-$con = mysqli_connect(XXXXXXXXXXXXXXXXXXXXXXX) or die(mysql_error());
-
+$con = mysqli_connect("mysql2.fluidhosting.com", "[demo - uid]", "[demo - pw]") or die( "We are experiencing technical difficulties with our database at this time. Please call us at (800) 272-3900 and we'll help you find support groups."  );
+//$con = mysqli_connect("mysql2.fluidhosting.com",  "[demo - uid]", "[demo - pw]") or die(mysql_error());
+/*
 if (mysqli_connect_errno($con))
   {
   echo "Failed to connect to MySQL: " . mysql_connect_error();
   }
-  
+  */
    //declare vars we will use later
    $sql = '';
    $choices = '';
    $gt = '';
    $sectionchoice = "";
+   $part = "";
    $gtonly = 0;
    $val = "";
 	//form processing -- gt
@@ -20,7 +21,7 @@ if (mysqli_connect_errno($con))
 	  $gt = $_POST['gt'];	  //if gt exists, put it into local var gt
 	  
 		  if ($gt == 'allgt') {		//in the form, "allgt" is the val of "Show me everything by groups" so if found abort loop here and make open query.
-			$sql = "SELECT SQL_CACHE Section, Grouptype, State, Town, Name, Phone, Email, Time FROM XXXXXXXXXXXX ORDER BY Grouptype, State, Town ASC";
+			$sql = "SELECT SQL_CACHE Section, Grouptype, State, Town, Name, Phone, Email, Time FROM `alzmass_admin`.`SGInfo` ORDER BY Grouptype, State, Town ASC";
 			$gtonly = 1;
 		}
 	}
@@ -29,7 +30,7 @@ if (mysqli_connect_errno($con))
 	  $sectionchoice = $_POST['sectionchoice'];			//if POST has sectionchoice, put it into local var sectionchoice
 		foreach($sectionchoice as $val){					//loop over sectionchoice and get values
 		 if ($val == 'ALL'){			//in the form, "ALL" is the val of "Show me everything" so if found abort loop here and make open query.
-		 $sql = "SELECT SQL_CACHE Section, Grouptype, State, Town, Name, Phone, Email, Time FROM XXXXXXXXXXXX ORDER BY Section, State, Town";
+		 $sql = "SELECT SQL_CACHE Section, Grouptype, State, Town, Name, Phone, Email, Time FROM `alzmass_admin`.`SGInfo` ORDER BY Section, State, Town";
 		 break;				
 		 } else if (strlen($choices) >= 1) {
 			   $choices = $choices .= ','.$val;	
@@ -37,22 +38,21 @@ if (mysqli_connect_errno($con))
 			   $choices = $val;  
 			   }			//put each val found in the var choices
 			}	
+		$part = 'section';
 		}	
+	
 	//unless sectionchoice was "ALL" or gt was "allgt" we should not yet have a query. Proceed to build the SQL.
 	if ($sql == '') {
 			
 		if ((strlen($gt) == 0) && (strlen($choices) > 0)) {	//choices only, no grouptype 
-		$sql = "SELECT SQL_CACHE Section, Grouptype, State, Town, Name, Phone, Email, Time FROM XXXXXXXXXXXX WHERE SectionID IN ($choices) ORDER BY Section, State, Town";
+		$sql = "SELECT SQL_CACHE Section, Grouptype, State, Town, Name, Phone, Email, Time FROM `alzmass_admin`.`SGInfo` WHERE SectionID IN ($choices) ORDER BY Section, State, Town";
 		}
-		
 		else if ((strlen($gt) > 0) && (strlen($choices)== 0)){ //no section, grouptype only
-		 $sql = "SELECT SQL_CACHE Section, Grouptype, State, Town, Name, Phone, Email, Time FROM XXXXXXXXXXXX WHERE grouptype LIKE '%$gt%' ORDER BY Section, State, Town";
+		 $sql = "SELECT SQL_CACHE Section, Grouptype, State, Town, Name, Phone, Email, Time FROM `alzmass_admin`.`SGInfo` WHERE grouptype LIKE '%$gt%' ORDER BY Section, State, Town";
 		}
-			 
 		else if ((strlen($gt) > 0) && (strlen($choices) > 0)) { //both section and grouptype
-		 $sql = "SELECT SQL_CACHE Section, Grouptype, State, Town, Name, Phone, Email, Time FROM XXXXXXXXXXXX WHERE grouptype LIKE '%$gt%' AND SectionID IN ($choices) ORDER BY Section, State, Town";
+		 $sql = "SELECT SQL_CACHE Section, Grouptype, State, Town, Name, Phone, Email, Time FROM `alzmass_admin`.`SGInfo` WHERE grouptype LIKE '%$gt%' AND SectionID IN ($choices) ORDER BY Section, State, Town";
 		}
-		
 		else if ((strlen($choices)== 0) && (strlen($gt) == 0)) { //no section, no grouptype
 			exit("<a class='searchagain' href='formpage.html' target='_self'>Search Again</a><br /><span class='exit'>You must select at least one checkbox!</span>&nbsp;&nbsp;	");
 		}
@@ -78,32 +78,30 @@ if (mysqli_connect_errno($con))
 			$current_grouptype = false;
 			$i = 0;
 			$lasti = 0;
-			
 			//section-based output
 			if($gtonly == 0) {
-
 				while ($row = $result->fetch_assoc()) {
-				  if ($row[trim('Section')] != $current_section) {
-							echo '</table>'; // close the table	
-							echo '	
-								<br /><span class="sectionheader">'.$row['Section'].'</span>
-								   <table class="contentsdisplay">
-									<tr>
-										<td width="30"><strong>ST</strong></td>
-										<td width="120"><strong>Town</strong></td>
-										<td width="170"><strong>Contact Name</strong></td>
-										<td width="130"><strong>Telephone</strong></td>
-										<td width="260"><strong>Email</strong></td>
-										<td width="108"><strong>Group type</strong></td>
-										<td width="52"><strong>Time</strong></td>
-									</tr>
-							';
+				  if ($row[trim($part)] != $current_part) {
+					echo '</div>'; // close the div
+					echo '	
+						<br /><span class="header">'.$row[$part].'</span>
+						   <div class="contentsdisplay">
+							<div class="row-wrap">
+								<div class="cell col1">ST</div>
+								<div class="cell col2">Town</div>
+								<div class="cell col3">Contact Name</div>
+								<div class="cell col4">Telephone</div>
+								<div class="cell col5">Email</div>
+								<div class="cell col6">Group type</div>
+								<div class="cell col7">Time</div>
+							</div>
+					';
 								  
-						$current_section = $row[trim('Section')];
+						$current_part = $row[trim($part)];
 					}
-					if ($current_section = $row[trim('Section')]) {
+					if ($current_part = $row[trim($part)]) {
 				
-							echo "<tr class=d$i><td width='30'>".$row['State']."</td><td width='120'>".$row['Town']."</td><td width='170'>".$row['Name']."</td><td width='130'>".$row['Phone']."</td><td width='260'>".$row['Email']."</td><td width='108'>".$row['Grouptype']."</td><td width='52'>".$row['Time']."</td></tr>";
+							echo "<div><div class='cell col1'>".$row['State']."</div><div class='cell col2'>".$row['Town']."</div><div class='cell col3'>".$row['Name']."</div><div class='cell col4'>".$row['Phone']."</div><div class='cell col5'>".$row['Email']."</div><div class='cell col6'>".$row['Grouptype']."</div><div class='cell col7'>".$row['Time']."</div></div>";
 							if ($i == 0) {
 							$i++;
 							} else {
@@ -111,43 +109,13 @@ if (mysqli_connect_errno($con))
 							}
 						}
 				}
-			} else {
-			//grouptype-based output
-				while ($row = $result->fetch_assoc()) {
-				  if ($row[trim('Grouptype')] != $current_grouptype) {
-							echo '</table>'; // close the table	
-							echo '	
-								<br /><span class="sectionheader">'.$row['Grouptype'].'</span>
-								   <table class="contentsdisplay">
-									<tr>
-										<td width="30"><strong>ST</strong></td>
-										<td width="120"><strong>Town</strong></td>
-										<td width="170"><strong>Contact Name</strong></td>
-										<td width="130"><strong>Telephone</strong></td>
-										<td width="260"><strong>Email</strong></td>
-										<td width="52"><strong>Time</strong></td>
-									</tr>
-							';
-								  
-						$current_grouptype = $row[trim('Grouptype')];
-					}
-					if ($current_grouptype = $row[trim('Grouptype')]) {
-				
-							echo "<tr class=d$i><td width='30'>".$row['State']."</td><td width='120'>".$row['Town']."</td><td width='170'>".$row['Name']."</td><td width='130'>".$row['Phone']."</td><td width='260'>".$row['Email']."</td><td width='52'>".$row['Time']."</td></tr>";
-							if ($i == 0) {
-							$i++;
-							} else {
-								$i = 0;
-							}
-						}
-				}
-			}
+			} 
+			
 			// finish it off	
-			echo '</table>'; // close the final table	
+			echo '</div>'; // close the final div
 			} else {		//zero results case
 				echo "<br /><div class='options'><span class='style21'>Zero (0) results. Your search did not return any matching items</span></div>";
 			}
 		}
 	//all done
 ?> 
-
