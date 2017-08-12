@@ -1,0 +1,7 @@
+A NOTE ABOUT JAVASCRIPT CODE HERE
+
+Yes, I know it is all old school. These apps were built in a non-profit where most of my time was prioritized to CMS updates, so I had to build quickly with what I knew. 
+
+BUT although I am behind the curve, today I do know more modern methods, at least ECMAScript 2015 ("ES6"), and if I were coding today you would see "let", "const", (function(blah, bing) ...()) and so on...but I just do not have the time to re-write everything here. PLEASE PLEASE have some sympathy for those of us with busy lives who cannot always keep up with the bleeding edge, we need jobs too! And being hired puts an immediate focus on getting up to speed on the latest.
+
+
