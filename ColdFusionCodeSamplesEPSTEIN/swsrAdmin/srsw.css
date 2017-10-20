@@ -1,0 +1,67 @@
+@charset "utf-8";
+/* CSS Document */
+H3 {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:14px;
+	color:#003d7e;
+	}
+.adminhead {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:16px;
+	color:#FF6600;
+	}
+table {
+background-color: #87898A;
+}
+
+.color1 {
+		font-family:Verdana, Arial, Helvetica, sans-serif;	  	
+		font-weight: normal;
+	  	background-color : #D7DADB;
+		font-size: 14px;
+		}
+
+.color2 {
+	font-family:Verdana, Arial, Helvetica, sans-serif;		
+	font-weight: normal;
+	background-color : #EBF3F5;
+	font-size: 14px;
+	}
+
+.color3 {
+	background-color : #D3D9FF;
+	font-size: 14px;
+	}
+
+.color4 {
+	background-color : #AAB6FF;
+	font-size: 12px;
+	}
+
+.color5 {
+	background-color : #FFEDCA;
+	font-size: 14px;
+	}
+#erroremail {
+	font-size: 12px;
+	font-family: "Verdana", "Arial", "Helvetica";
+	}
+	
+.closed {
+display: none;
+}
+
+.open {display: inline;
+font-family: "Verdana", "Arial", "Helvetica";
+padding: 0; margin:0;
+font-size: 14px;
+z-index: 999;
+}
+
+input {
+	background-color : #ffff99;
+	color: #000000
+}
+
+
+	
